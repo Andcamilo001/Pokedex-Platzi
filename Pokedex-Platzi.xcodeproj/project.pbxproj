@@ -76,18 +76,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		47153F1C2AA333D70043A5D7 /* System */ = {
+		47153F1D2AA3390D0043A5D7 /* Recourses */ = {
 			isa = PBXGroup;
 			children = (
-				474C02D62AA322BD00A78B3A /* Pokedex_PlatziApp.swift */,
-				474C02D82AA322BD00A78B3A /* Persistence.swift */,
-				474C02DD2AA322BD00A78B3A /* ContentView.swift */,
-				474C02DF2AA322CF00A78B3A /* Assets.xcassets */,
-				474C02E12AA322CF00A78B3A /* Pokedex_Platzi.entitlements */,
-				474C02DA2AA322BD00A78B3A /* Pokedex_Platzi.xcdatamodeld */,
-				474C02E22AA322CF00A78B3A /* Preview Content */,
 			);
-			path = System;
+			path = Recourses;
 			sourceTree = "<group>";
 		};
 		474C02CA2AA322BD00A78B3A = {
@@ -113,7 +106,14 @@
 		474C02D52AA322BD00A78B3A /* Pokedex-Platzi */ = {
 			isa = PBXGroup;
 			children = (
-				47153F1C2AA333D70043A5D7 /* System */,
+				47153F1D2AA3390D0043A5D7 /* Recourses */,
+				474C02E12AA322CF00A78B3A /* Pokedex_Platzi.entitlements */,
+				474C02D62AA322BD00A78B3A /* Pokedex_PlatziApp.swift */,
+				474C02D82AA322BD00A78B3A /* Persistence.swift */,
+				474C02DD2AA322BD00A78B3A /* ContentView.swift */,
+				474C02DF2AA322CF00A78B3A /* Assets.xcassets */,
+				474C02DA2AA322BD00A78B3A /* Pokedex_Platzi.xcdatamodeld */,
+				474C02E22AA322CF00A78B3A /* Preview Content */,
 			);
 			path = "Pokedex-Platzi";
 			sourceTree = "<group>";
@@ -428,6 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Pokedex-Platzi/Pokedex_Platzi.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex-Platzi/Preview Content\"";
@@ -452,6 +453,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andcamilo001.Pokedex-Platzi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -466,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Pokedex-Platzi/Pokedex_Platzi.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex-Platzi/Preview Content\"";
@@ -490,6 +493,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andcamilo001.Pokedex-Platzi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
