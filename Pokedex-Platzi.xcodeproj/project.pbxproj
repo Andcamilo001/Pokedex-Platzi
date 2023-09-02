@@ -76,6 +76,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47153F1C2AA333D70043A5D7 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				474C02D62AA322BD00A78B3A /* Pokedex_PlatziApp.swift */,
+				474C02D82AA322BD00A78B3A /* Persistence.swift */,
+				474C02DD2AA322BD00A78B3A /* ContentView.swift */,
+				474C02DF2AA322CF00A78B3A /* Assets.xcassets */,
+				474C02E12AA322CF00A78B3A /* Pokedex_Platzi.entitlements */,
+				474C02DA2AA322BD00A78B3A /* Pokedex_Platzi.xcdatamodeld */,
+				474C02E22AA322CF00A78B3A /* Preview Content */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		474C02CA2AA322BD00A78B3A = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +113,7 @@
 		474C02D52AA322BD00A78B3A /* Pokedex-Platzi */ = {
 			isa = PBXGroup;
 			children = (
-				474C02D62AA322BD00A78B3A /* Pokedex_PlatziApp.swift */,
-				474C02D82AA322BD00A78B3A /* Persistence.swift */,
-				474C02DD2AA322BD00A78B3A /* ContentView.swift */,
-				474C02DF2AA322CF00A78B3A /* Assets.xcassets */,
-				474C02E12AA322CF00A78B3A /* Pokedex_Platzi.entitlements */,
-				474C02DA2AA322BD00A78B3A /* Pokedex_Platzi.xcdatamodeld */,
-				474C02E22AA322CF00A78B3A /* Preview Content */,
+				47153F1C2AA333D70043A5D7 /* System */,
 			);
 			path = "Pokedex-Platzi";
 			sourceTree = "<group>";
