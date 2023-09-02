@@ -83,6 +83,13 @@
 			path = Recourses;
 			sourceTree = "<group>";
 		};
+		47153F1E2AA3398C0043A5D7 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 		474C02CA2AA322BD00A78B3A = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +113,7 @@
 		474C02D52AA322BD00A78B3A /* Pokedex-Platzi */ = {
 			isa = PBXGroup;
 			children = (
+				47153F1E2AA3398C0043A5D7 /* SplashScreen */,
 				47153F1D2AA3390D0043A5D7 /* Recourses */,
 				474C02E12AA322CF00A78B3A /* Pokedex_Platzi.entitlements */,
 				474C02D62AA322BD00A78B3A /* Pokedex_PlatziApp.swift */,
