@@ -16,6 +16,17 @@
 		474C02EE2AA322D000A78B3A /* Pokedex_PlatziTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C02ED2AA322D000A78B3A /* Pokedex_PlatziTests.swift */; };
 		474C02F82AA322D000A78B3A /* Pokedex_PlatziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C02F72AA322D000A78B3A /* Pokedex_PlatziUITests.swift */; };
 		474C02FA2AA322D000A78B3A /* Pokedex_PlatziUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C02F92AA322D000A78B3A /* Pokedex_PlatziUITestsLaunchTests.swift */; };
+		ED8779CE2AA62E9200BF201D /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = ED8779CD2AA62E9200BF201D /* FLAnimatedImage */; };
+		ED8779D02AA6335600BF201D /* GIfImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8779CF2AA6335600BF201D /* GIfImage.swift */; };
+		ED8779D12AA6335A00BF201D /* GIfImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8779CF2AA6335600BF201D /* GIfImage.swift */; };
+		ED8779D22AA6335B00BF201D /* GIfImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8779CF2AA6335600BF201D /* GIfImage.swift */; };
+		ED8779D62AA6358200BF201D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8779D52AA6358200BF201D /* SplashScreen.swift */; };
+		ED8779D92AA637EB00BF201D /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8779D82AA637EB00BF201D /* Constans.swift */; };
+		ED8779DA2AA637EB00BF201D /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8779D82AA637EB00BF201D /* Constans.swift */; };
+		ED8779DB2AA637EB00BF201D /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8779D82AA637EB00BF201D /* Constans.swift */; };
+		ED8779DE2AA6393B00BF201D /* pikachuAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = ED8779DD2AA6393B00BF201D /* pikachuAnimated.gif */; };
+		ED8779DF2AA6393B00BF201D /* pikachuAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = ED8779DD2AA6393B00BF201D /* pikachuAnimated.gif */; };
+		ED8779E02AA6393B00BF201D /* pikachuAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = ED8779DD2AA6393B00BF201D /* pikachuAnimated.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,10 @@
 		474C02F32AA322D000A78B3A /* Pokedex-PlatziUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pokedex-PlatziUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		474C02F72AA322D000A78B3A /* Pokedex_PlatziUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex_PlatziUITests.swift; sourceTree = "<group>"; };
 		474C02F92AA322D000A78B3A /* Pokedex_PlatziUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex_PlatziUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED8779CF2AA6335600BF201D /* GIfImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIfImage.swift; sourceTree = "<group>"; };
+		ED8779D52AA6358200BF201D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		ED8779D82AA637EB00BF201D /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		ED8779DD2AA6393B00BF201D /* pikachuAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pikachuAnimated.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8779CE2AA62E9200BF201D /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,20 +92,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		47153F1C2AA333D70043A5D7 /* System */ = {
-			isa = PBXGroup;
-			children = (
-				474C02D62AA322BD00A78B3A /* Pokedex_PlatziApp.swift */,
-				474C02D82AA322BD00A78B3A /* Persistence.swift */,
-				474C02DD2AA322BD00A78B3A /* ContentView.swift */,
-				474C02DF2AA322CF00A78B3A /* Assets.xcassets */,
-				474C02E12AA322CF00A78B3A /* Pokedex_Platzi.entitlements */,
-				474C02DA2AA322BD00A78B3A /* Pokedex_Platzi.xcdatamodeld */,
-				474C02E22AA322CF00A78B3A /* Preview Content */,
-			);
-			path = System;
-			sourceTree = "<group>";
-		};
 		474C02CA2AA322BD00A78B3A = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +115,15 @@
 		474C02D52AA322BD00A78B3A /* Pokedex-Platzi */ = {
 			isa = PBXGroup;
 			children = (
-				47153F1C2AA333D70043A5D7 /* System */,
+				ED8779D32AA634C900BF201D /* Features */,
+				ED8779CA2AA62E6E00BF201D /* Common */,
+				474C02E12AA322CF00A78B3A /* Pokedex_Platzi.entitlements */,
+				474C02D62AA322BD00A78B3A /* Pokedex_PlatziApp.swift */,
+				474C02D82AA322BD00A78B3A /* Persistence.swift */,
+				474C02DD2AA322BD00A78B3A /* ContentView.swift */,
+				474C02DF2AA322CF00A78B3A /* Assets.xcassets */,
+				474C02DA2AA322BD00A78B3A /* Pokedex_Platzi.xcdatamodeld */,
+				474C02E22AA322CF00A78B3A /* Preview Content */,
 			);
 			path = "Pokedex-Platzi";
 			sourceTree = "<group>";
@@ -143,6 +153,56 @@
 			path = "Pokedex-PlatziUITests";
 			sourceTree = "<group>";
 		};
+		ED8779CA2AA62E6E00BF201D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ED8779DC2AA6391B00BF201D /* GIFs */,
+				ED8779D72AA637D700BF201D /* Constans */,
+				ED8779CB2AA62E7300BF201D /* Recourses */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		ED8779CB2AA62E7300BF201D /* Recourses */ = {
+			isa = PBXGroup;
+			children = (
+				ED8779CF2AA6335600BF201D /* GIfImage.swift */,
+			);
+			path = Recourses;
+			sourceTree = "<group>";
+		};
+		ED8779D32AA634C900BF201D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				ED8779D42AA634D200BF201D /* SplashScreen */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		ED8779D42AA634D200BF201D /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ED8779D52AA6358200BF201D /* SplashScreen.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		ED8779D72AA637D700BF201D /* Constans */ = {
+			isa = PBXGroup;
+			children = (
+				ED8779D82AA637EB00BF201D /* Constans.swift */,
+			);
+			path = Constans;
+			sourceTree = "<group>";
+		};
+		ED8779DC2AA6391B00BF201D /* GIFs */ = {
+			isa = PBXGroup;
+			children = (
+				ED8779DD2AA6393B00BF201D /* pikachuAnimated.gif */,
+			);
+			path = GIFs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,6 +219,9 @@
 			dependencies = (
 			);
 			name = "Pokedex-Platzi";
+			packageProductDependencies = (
+				ED8779CD2AA62E9200BF201D /* FLAnimatedImage */,
+			);
 			productName = "Pokedex-Platzi";
 			productReference = 474C02D32AA322BD00A78B3A /* Pokedex-Platzi.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +294,9 @@
 				Base,
 			);
 			mainGroup = 474C02CA2AA322BD00A78B3A;
+			packageReferences = (
+				ED8779CC2AA62E9200BF201D /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+			);
 			productRefGroup = 474C02D42AA322BD00A78B3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +315,7 @@
 			files = (
 				474C02E42AA322CF00A78B3A /* Preview Assets.xcassets in Resources */,
 				474C02E02AA322CF00A78B3A /* Assets.xcassets in Resources */,
+				ED8779DE2AA6393B00BF201D /* pikachuAnimated.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8779DF2AA6393B00BF201D /* pikachuAnimated.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8779E02AA6393B00BF201D /* pikachuAnimated.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +342,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8779D62AA6358200BF201D /* SplashScreen.swift in Sources */,
 				474C02DC2AA322BD00A78B3A /* Pokedex_Platzi.xcdatamodeld in Sources */,
 				474C02D72AA322BD00A78B3A /* Pokedex_PlatziApp.swift in Sources */,
 				474C02DE2AA322BD00A78B3A /* ContentView.swift in Sources */,
+				ED8779D02AA6335600BF201D /* GIfImage.swift in Sources */,
+				ED8779D92AA637EB00BF201D /* Constans.swift in Sources */,
 				474C02D92AA322BD00A78B3A /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +356,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8779D12AA6335A00BF201D /* GIfImage.swift in Sources */,
 				474C02EE2AA322D000A78B3A /* Pokedex_PlatziTests.swift in Sources */,
+				ED8779DA2AA637EB00BF201D /* Constans.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +368,8 @@
 			files = (
 				474C02F82AA322D000A78B3A /* Pokedex_PlatziUITests.swift in Sources */,
 				474C02FA2AA322D000A78B3A /* Pokedex_PlatziUITestsLaunchTests.swift in Sources */,
+				ED8779DB2AA637EB00BF201D /* Constans.swift in Sources */,
+				ED8779D22AA6335B00BF201D /* GIfImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Pokedex-Platzi/Pokedex_Platzi.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex-Platzi/Preview Content\"";
@@ -435,6 +512,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Pokedex;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -449,9 +527,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andcamilo001.Pokedex-Platzi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -466,6 +545,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Pokedex-Platzi/Pokedex_Platzi.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex-Platzi/Preview Content\"";
@@ -473,6 +553,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Pokedex;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -487,9 +568,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andcamilo001.Pokedex-Platzi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -628,6 +710,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED8779CC2AA62E9200BF201D /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED8779CD2AA62E9200BF201D /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED8779CC2AA62E9200BF201D /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		474C02DA2AA322BD00A78B3A /* Pokedex_Platzi.xcdatamodeld */ = {
