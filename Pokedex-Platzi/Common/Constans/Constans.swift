@@ -20,6 +20,11 @@ struct stringToAssets {
     static let onboardingImageScreenOne = "OnboardingScreenOne"
     static let onboardingImageScreenTwo = "OnboardingScreenTwo"
     static let onboardingImageScreenThree = "OnboardingScreenThree"
+    static let createAccountScreen = "CreateAccountScreen"
+    static let googleIcon = "GoogleIcon"
+    static let appleIcon = "AppleIcon"
+    static let createAccountSuccess = "CreateAccountSuccess"
+    static let createAccountBackground = "CreateAccountBackground"
 }
 
 struct framesUI {
@@ -35,6 +40,10 @@ struct textButtons {
     static let letsGo = "Vamos a comenzar"
     static let createAccount = "Crear cuenta"
     static let accountExists = "Ya tengo una cuenta"
+    static let createWithApple = "Continuar con Apple"
+    static let createWithGoogle = "Continuar con Google"
+    static let createWithMail = "Continuar con email"
+    static let create = "Crear"
 }
 
 struct Fonts {
@@ -53,4 +62,18 @@ struct appText {
     static let subtitleOnboardingScreenTwo = "Regístrate y guarda tu perfil, tus pokémon favoritos, tu configuración y mucho más en la aplicación, incluso sin conexión a Internet."
     static let titleOnboardingScreenThree = "¿Estás listo para esta aventura?"
     static let subtitleOnboardingScreenThree = "Sólo tienes que crear una cuenta y empezar a explorar el mundo Pokémon hoy mismo."
+    static let titleCreateAccountScreen = "Falta poco para explorar este mundo."
+    static let subtitleCreateAccountScreen = "¿Cómo quieres conectar?"
+    static let createAccount = "Crear cuenta"
+    static let whatIsYourMail = "Cual es tu email?"
+    static let createCredentials = "Crea una contraseña"
+    static let confirmCredentials = "Confirma tu contraseña"
+    static let mail = "Correo"
+    static let invalidMail = "Utilice una dirección de correo electrónico válida."
+    static let credential = "Contraseña"
+    static let invalidCredential = "La contraseña debe tener minimo 8 caracteres."
+    static let invalidConfirmCredential = "Las contraseñas deben coincidir."
+    static let titleAccountCreateSuccess = "Su cuenta ha sido creada con exito!"
+    static let subTitleAccountCreateSuccess = "Sea bienvenido a este increible mundo Pokemon"
+    
 }
