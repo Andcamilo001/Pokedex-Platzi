@@ -82,6 +82,9 @@
 		ED4D70BE2AA835AE0074B9A9 /* LoginSucess.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D70BD2AA835AE0074B9A9 /* LoginSucess.swift */; };
 		ED4D70BF2AA835AE0074B9A9 /* LoginSucess.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D70BD2AA835AE0074B9A9 /* LoginSucess.swift */; };
 		ED4D70C02AA835AE0074B9A9 /* LoginSucess.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D70BD2AA835AE0074B9A9 /* LoginSucess.swift */; };
+		ED4D70C42AA84CC40074B9A9 /* TabViewPokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D70C32AA84CC40074B9A9 /* TabViewPokedex.swift */; };
+		ED4D70C52AA84CC40074B9A9 /* TabViewPokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D70C32AA84CC40074B9A9 /* TabViewPokedex.swift */; };
+		ED4D70C62AA84CC40074B9A9 /* TabViewPokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D70C32AA84CC40074B9A9 /* TabViewPokedex.swift */; };
 		ED4E73752AA6B9A40078781F /* OnboardingScreenThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E73742AA6B9A40078781F /* OnboardingScreenThree.swift */; };
 		ED4E73782AA6C3F20078781F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED4E73772AA6C3F20078781F /* FirebaseAnalytics */; };
 		ED4E737A2AA6C3F20078781F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ED4E73792AA6C3F20078781F /* FirebaseAuth */; };
@@ -155,6 +158,7 @@
 		ED4D70B42AA830090074B9A9 /* LoginDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataSource.swift; sourceTree = "<group>"; };
 		ED4D70B92AA830760074B9A9 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		ED4D70BD2AA835AE0074B9A9 /* LoginSucess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSucess.swift; sourceTree = "<group>"; };
+		ED4D70C32AA84CC40074B9A9 /* TabViewPokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewPokedex.swift; sourceTree = "<group>"; };
 		ED4E73742AA6B9A40078781F /* OnboardingScreenThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenThree.swift; sourceTree = "<group>"; };
 		ED4E73812AA6C84A0078781F /* CreateAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountScreen.swift; sourceTree = "<group>"; };
 		ED4E73842AA6EF940078781F /* AuthenticationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDataSource.swift; sourceTree = "<group>"; };
@@ -338,6 +342,22 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		ED4D70C12AA846F60074B9A9 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				ED4D70C22AA847630074B9A9 /* View */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		ED4D70C22AA847630074B9A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED4D70C32AA84CC40074B9A9 /* TabViewPokedex.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ED4E737F2AA6C7920078781F /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +430,7 @@
 		ED8779D32AA634C900BF201D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				ED4D70C12AA846F60074B9A9 /* TabView */,
 				ED4D70A42AA828D90074B9A9 /* Login */,
 				ED4E737F2AA6C7920078781F /* CreateAccount */,
 				ED8779E22AA65D8B00BF201D /* Onboarding */,
@@ -659,6 +680,7 @@
 				ED4D70512AA815A40074B9A9 /* AuthenticationModel.swift in Sources */,
 				ED4D70BE2AA835AE0074B9A9 /* LoginSucess.swift in Sources */,
 				ED4D704C2AA80DDE0074B9A9 /* GoogleAuthenticationViewModel.swift in Sources */,
+				ED4D70C42AA84CC40074B9A9 /* TabViewPokedex.swift in Sources */,
 				ED8779D02AA6335600BF201D /* GIfImage.swift in Sources */,
 				ED4E73822AA6C84A0078781F /* CreateAccountScreen.swift in Sources */,
 				ED4E738D2AA738A80078781F /* CreateAccountWithMail.swift in Sources */,
@@ -693,6 +715,7 @@
 				ED4D706C2AA8182A0074B9A9 /* SplashScreen.swift in Sources */,
 				ED4D70BF2AA835AE0074B9A9 /* LoginSucess.swift in Sources */,
 				ED4D708B2AA81F250074B9A9 /* AuthenticationRepository.swift in Sources */,
+				ED4D70C52AA84CC40074B9A9 /* TabViewPokedex.swift in Sources */,
 				ED4D70532AA816260074B9A9 /* AuthenticationTests.swift in Sources */,
 				ED4D70622AA818020074B9A9 /* CreateAccountWithMail.swift in Sources */,
 				ED4D708D2AA81F280074B9A9 /* AuthenticationDataSource.swift in Sources */,
@@ -727,6 +750,7 @@
 				ED4D708A2AA81F240074B9A9 /* GoogleAuthenticationViewModel.swift in Sources */,
 				ED4D70C02AA835AE0074B9A9 /* LoginSucess.swift in Sources */,
 				ED4D706D2AA8182A0074B9A9 /* SplashScreen.swift in Sources */,
+				ED4D70C62AA84CC40074B9A9 /* TabViewPokedex.swift in Sources */,
 				ED4D708C2AA81F260074B9A9 /* AuthenticationRepository.swift in Sources */,
 				ED8779E82AA65E1A00BF201D /* OnboardingScreenOne.swift in Sources */,
 				ED4D70632AA818030074B9A9 /* CreateAccountWithMail.swift in Sources */,

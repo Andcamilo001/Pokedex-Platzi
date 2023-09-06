@@ -27,6 +27,14 @@ struct stringToAssets {
     static let createAccountBackground = "CreateAccountBackground"
     static let loginScreen = "LoginScreen"
     static let loginSuccess = "LoginSuccess"
+    static let pokedexUnselected = "PokedexUnselected"
+    static let regionUnselected = "RegionUnselected"
+    static let favoritesUnselected = "FavoritesUnselected"
+    static let profileUnselected = "ProfileUnselected"
+    static let pokedexSelected = "PokedexSelected"
+    static let regionSelected = "RegionSelected"
+    static let favoritesSelected = "FavoritesSelected"
+    static let profileSelected = "ProfileSelected"
 }
 
 struct framesUI {
@@ -46,6 +54,10 @@ struct textButtons {
     static let createWithGoogle = "Continuar con Google"
     static let createWithMail = "Continuar con email"
     static let create = "Crear"
+    static let tabOne = "Pokedex"
+    static let tabTwo = "Region"
+    static let tabThree = "Favoritos"
+    static let tabFour = "Perfil"
 }
 
 struct Fonts {
