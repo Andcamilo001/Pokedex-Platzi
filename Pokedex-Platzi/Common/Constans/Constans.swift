@@ -25,6 +25,8 @@ struct stringToAssets {
     static let appleIcon = "AppleIcon"
     static let createAccountSuccess = "CreateAccountSuccess"
     static let createAccountBackground = "CreateAccountBackground"
+    static let loginScreen = "LoginScreen"
+    static let loginSuccess = "LoginSuccess"
 }
 
 struct framesUI {
@@ -75,5 +77,12 @@ struct appText {
     static let invalidConfirmCredential = "Las contraseñas deben coincidir."
     static let titleAccountCreateSuccess = "Su cuenta ha sido creada con exito!"
     static let subTitleAccountCreateSuccess = "Sea bienvenido a este increible mundo Pokemon"
+    static let titleLoginScreen = "Que bueno verte por aqui nuevamente."
+    static let subtitleLoginScreen = "¿Cómo deseas conectar?"
+    static let signIn = "Entrar"
+    static let titleAuthenticationLogin = "Bienvenido de vuelta!"
+    static let subtitleAuthenticationLogin = "Completa los datos"
+    static let titleLoginSuccess = "Bienvenido de vuelta, Entrenador!"
+    static let subtitleLoginSuccess = "Esperamos que hayas tenido muchas aventuras desde la ultima vez que nos vimos."
     
 }
