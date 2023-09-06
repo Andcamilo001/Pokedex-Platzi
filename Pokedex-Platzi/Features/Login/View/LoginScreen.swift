@@ -1,22 +1,22 @@
 //
-//  CreateAccountScreen.swift
+//  LoginScreen.swift
 //  Pokedex-Platzi
 //
-//  Created by Andres Camilo Lezcano Restrepo on 4/09/23.
+//  Created by Andres Camilo Lezcano Restrepo on 5/09/23.
 //
 
 import SwiftUI
 import AuthenticationServices
 
-struct CreateAccountScreen: View {
-    @Environment(\.presentationMode) var createAccountScreenMode
-    @State var image: String = stringToAssets.createAccountScreen
-    @State var title: String = appText.titleCreateAccountScreen
-    @State var subtitle: String = appText.subtitleCreateAccountScreen
+struct LoginScreen: View {
+    @Environment(\.presentationMode) var loginScreenMode
+    @State var image: String = stringToAssets.loginScreen
+    @State var title: String = appText.titleLoginScreen
+    @State var subtitle: String = appText.subtitleLoginScreen
     @State var textButtonEmail: String = textButtons.createWithMail
     @State var textButtonApple: String = textButtons.createWithApple
     @State var textButtonGoogle: String = textButtons.createWithGoogle
-    @State var createEmail: Bool = false
+    @State var loginEmail: Bool = false
     @State var currentNonce: String?
     @ObservedObject var appleAuthenticationViewModel: AppleAuthenticationViewModel = AppleAuthenticationViewModel()
     @ObservedObject var googleAuthenticationViewModel: GoogleAuthenticationViewModel = GoogleAuthenticationViewModel()
@@ -26,24 +26,24 @@ struct CreateAccountScreen: View {
         NavigationView {
             ZStack {
                 
-                NavigationLink(destination: CreateAccountSuccess(), isActive: $appleAuthenticationViewModel.appleAuth) { }
-                NavigationLink(destination: CreateAccountSuccess(), isActive: $googleAuthenticationViewModel.googleAuth) { }
-                NavigationLink(destination: CreateAccountWithMail(), isActive: $createEmail) { }
+                NavigationLink(destination: LoginSucess(), isActive: $appleAuthenticationViewModel.appleAuth) { }
+                NavigationLink(destination: LoginSucess(), isActive: $googleAuthenticationViewModel.googleAuth) { }
+                NavigationLink(destination: AuthenticationLogin(), isActive: $loginEmail) { }
                 
                 VStack {
                     
                     HStack {
                         
                         Button(action: {
-                            createAccountScreenMode.wrappedValue.dismiss()
+                            loginScreenMode.wrappedValue.dismiss()
                         }) {
                             Image(systemName: "chevron.left")
                                 .accentColor(.black)
                             
                         }
                         
-                        .padding(.leading, framesUI.width * -0.25)
-                        Text(appText.createAccount)
+                        .padding(.leading, framesUI.width * -0.35)
+                        Text(appText.signIn)
                             .font(.custom(Fonts.poppinsSemiBold, size: framesUI.width * 0.0465))
                     }
                     .padding(.top, framesUI.height * -0.01)
@@ -116,7 +116,7 @@ struct CreateAccountScreen: View {
                     }
                     
                     Button(action: {
-                        createEmail = true
+                        loginEmail = true
                     }) {
                         ZStack {
                             
@@ -140,10 +140,9 @@ struct CreateAccountScreen: View {
     }
 }
 
-struct CreateAccountScreen_Previews: PreviewProvider {
+
+struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        CreateAccountScreen()
+        LoginScreen()
     }
 }
-
-
