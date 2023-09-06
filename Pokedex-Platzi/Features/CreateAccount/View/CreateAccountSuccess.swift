@@ -1,28 +1,28 @@
 //
-//  OnboardingScreenThree.swift
+//  CreateAccountSuccess.swift
 //  Pokedex-Platzi
 //
-//  Created by Andres Camilo Lezcano Restrepo on 4/09/23.
+//  Created by Andres Camilo Lezcano Restrepo on 5/09/23.
 //
 
 import SwiftUI
 
-struct OnboardingScreenThree: View {
-    @State var image: String = stringToAssets.onboardingImageScreenThree
-    @State var title: String = appText.titleOnboardingScreenThree
-    @State var subtitle: String = appText.subtitleOnboardingScreenThree
-    @State var textButton: String = textButtons.createAccount
-    @State var textButtonWhite: String = textButtons.accountExists
-    @State var createAccount: Bool = false
-    @State var login: Bool = false
+struct CreateAccountSuccess: View {
+    @State var image: String = stringToAssets.createAccountSuccess
+    @State var title: String = appText.titleAccountCreateSuccess
+    @State var subtitle: String = appText.subTitleAccountCreateSuccess
+    @State var textButton: String = textButtons.next
+    @State var nextPage: Bool = false
     
     var body: some View {
         
         NavigationView {
             ZStack {
                 
-                NavigationLink(destination: CreateAccountScreen(), isActive: $createAccount) { }
-                NavigationLink(destination: OnboardingScreenTwo(), isActive: $login) { }
+                NavigationLink(destination: OnboardingScreenThree(), isActive: $nextPage) { }
+                
+                Image(stringToAssets.createAccountBackground)
+                    .padding(.bottom, framesUI.height * 0.4)
                 
                 VStack {
                     
@@ -32,19 +32,18 @@ struct OnboardingScreenThree: View {
                     Text(title)
                         .font(.custom(Fonts.poppinsSemiBold, size: framesUI.width * 0.0725))
                         .multilineTextAlignment(.center)
-                        .lineLimit(2)
-                        .frame(width: framesUI.width * 0.91)
-                        .padding()
+                        .lineLimit(4)
+                        .frame(width: framesUI.width * 0.91, height: framesUI.height * 0.1)
+                        .padding(.top)
                     
                     Text(subtitle)
                         .font(.custom(Fonts.poppinsRegular, size: framesUI.width * 0.038))
                         .multilineTextAlignment(.center)
-                        .frame(width: framesUI.width * 0.91)
-                        .padding()
+                        .frame(width: framesUI.width * 0.91, height: framesUI.height * 0.08)
                     
                     
                     Button(action: {
-                        createAccount = true
+                        nextPage = true
                     }) {
                         ZStack {
                             
@@ -56,17 +55,8 @@ struct OnboardingScreenThree: View {
                         .background(PokedexColors.buttonsBlue)
                         .cornerRadius(50)
                     }
-                    .padding()
-                    
-                    Button(action: {
-                        login = true
-                    }) {
-                        Text(textButtons.accountExists)
-                            .font(.custom(Fonts.poppinsSemiBold, size: framesUI.width * 0.05))
-                            .foregroundColor(PokedexColors.buttonsBlue)
-                    }
                 }
-                .padding(.top, framesUI.height * 0.14)
+                .padding(.top, framesUI.height * 0.21)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(PokedexColors.backgroundWhite)
@@ -77,8 +67,8 @@ struct OnboardingScreenThree: View {
 }
 
 
-struct OnboardingScreenThree_Previews: PreviewProvider {
+struct CreateAccountSuccess_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingScreenThree()
+        CreateAccountSuccess()
     }
 }
