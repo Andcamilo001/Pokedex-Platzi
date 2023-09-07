@@ -20,15 +20,17 @@ struct CreateAccountScreen: View {
     @State var currentNonce: String?
     @ObservedObject var appleAuthenticationViewModel: AppleAuthenticationViewModel = AppleAuthenticationViewModel()
     @ObservedObject var googleAuthenticationViewModel: GoogleAuthenticationViewModel = GoogleAuthenticationViewModel()
+    @Binding var createAccount: Bool
+    @Binding var login: Bool
     
     var body: some View {
         
         NavigationView {
             ZStack {
                 
-                NavigationLink(destination: CreateAccountSuccess(), isActive: $appleAuthenticationViewModel.appleAuth) { }
-                NavigationLink(destination: CreateAccountSuccess(), isActive: $googleAuthenticationViewModel.googleAuth) { }
-                NavigationLink(destination: CreateAccountWithMail(), isActive: $createEmail) { }
+                NavigationLink(destination: CreateAccountSuccess(createAccount: $createAccount, login: $login), isActive: $appleAuthenticationViewModel.appleAuth) { }
+                NavigationLink(destination: CreateAccountSuccess(createAccount: $createAccount, login: $login), isActive: $googleAuthenticationViewModel.googleAuth) { }
+                NavigationLink(destination: CreateAccountWithMail(createAccounts: $createEmail, login: $login), isActive: $createEmail) { }
                 
                 VStack {
                     
@@ -140,10 +142,5 @@ struct CreateAccountScreen: View {
     }
 }
 
-struct CreateAccountScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateAccountScreen()
-    }
-}
 
 

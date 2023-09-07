@@ -30,13 +30,12 @@ struct Pokedex_PlatziApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var authenticationViewModel = AuthenticationViewModel()
-//    @StateObject private var dataController = DataController()
     
     var body: some Scene {
         WindowGroup {
             
             if let user = authenticationViewModel.user {
-                TabViewPokedex()
+                TabViewPokedex(createAccount: .constant(true), login: .constant(true))
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
             } else {
                 

@@ -13,13 +13,15 @@ struct CreateAccountSuccess: View {
     @State var subtitle: String = appText.subTitleAccountCreateSuccess
     @State var textButton: String = textButtons.next
     @State var nextPage: Bool = false
+    @Binding var createAccount: Bool
+    @Binding var login: Bool
     
     var body: some View {
         
         NavigationView {
             ZStack {
                 
-                NavigationLink(destination: OnboardingScreenThree(), isActive: $nextPage) { }
+                NavigationLink(destination: TabViewPokedex(createAccount: $createAccount, login: $login), isActive: $nextPage) { }
                 
                 Image(stringToAssets.createAccountBackground)
                     .padding(.bottom, framesUI.height * 0.4)
@@ -63,12 +65,5 @@ struct CreateAccountSuccess: View {
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-    }
-}
-
-
-struct CreateAccountSuccess_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateAccountSuccess()
     }
 }

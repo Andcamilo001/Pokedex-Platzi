@@ -12,6 +12,8 @@ struct TabViewPokedex: View {
     @State private var selectedTab = 0
     @ObservedObject var pokemonListViewModel: PokemonListViewModel = PokemonListViewModel(pokemonRepository: PokemonRepository())
     @Environment(\.managedObjectContext) var context
+    @Binding var createAccount: Bool
+    @Binding var login: Bool
         
         var body: some View {
             
@@ -39,7 +41,7 @@ struct TabViewPokedex: View {
                         }
                         .tag(2)
                     
-                    Text("Pestaña 3")
+                    ProfileView(createAccount: $createAccount, login: $login)
                         .tabItem {
                             Image(selectedTab == 3 ? stringToAssets.profileSelected : stringToAssets.profileUnselected)
                             Text(textButtons.tabFour)

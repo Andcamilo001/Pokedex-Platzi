@@ -22,4 +22,8 @@ final class AuthenticationRepository {
     func createNewUser(email: String, password: String, completionBlock: @escaping(Result<User, Error>) -> Void) {
         authtnticationFireBaseDataSource.createNewUser(email: email, password: password, completionBlock: completionBlock)
     }
+    
+    func logOut() throws {
+        try authtnticationFireBaseDataSource.logOut()
+    }
 }

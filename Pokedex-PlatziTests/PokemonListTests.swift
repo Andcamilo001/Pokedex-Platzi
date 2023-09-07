@@ -14,7 +14,7 @@ final class PokemonListTests: XCTestCase {
         
         let repository = MockPokemonNetwork()
         
-        let expectedPokemon = Pokemon(id: 1, name: "bulbasaur", sprites: Sprites(frontDefault: ""), types: [TypeElement(slot: 1, type: Species(name: "grass", url: "")), TypeElement(slot: 2, type: Species(name: "poison", url: ""))])
+        let expectedPokemon = Pokemon(id: 1, name: "bulbasaur", sprites: Sprites(frontDefault: "", other: Other(home: Home(frontDefault: "", frontShiny: ""))), types: [TypeElement(slot: 1, type: Species(name: "grass", url: "")), TypeElement(slot: 2, type: Species(name: "poison", url: ""))])
         
         do {
             let pokemon = try repository.fetchPokemon(id: 1)
