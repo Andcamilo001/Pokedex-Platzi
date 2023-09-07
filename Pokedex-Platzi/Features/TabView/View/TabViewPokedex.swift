@@ -25,7 +25,7 @@ struct TabViewPokedex: View {
                         }
                         .tag(0)
                     
-                    TestingCoreData()
+                    RegionView()
                         .tabItem {
                             Image(selectedTab == 1 ? stringToAssets.regionSelected : stringToAssets.regionUnselected)
                             Text(textButtons.tabTwo)
