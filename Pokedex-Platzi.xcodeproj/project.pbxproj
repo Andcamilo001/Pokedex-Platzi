@@ -142,6 +142,7 @@
 		ED6998492AA9AFE9005E1E61 /* PokemonRegionDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6998482AA9AFE9005E1E61 /* PokemonRegionDomain.swift */; };
 		ED69984B2AA9B06A005E1E61 /* PokemonRegionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69984A2AA9B06A005E1E61 /* PokemonRegionViewModel.swift */; };
 		ED69984D2AA9B174005E1E61 /* PokemonRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69984C2AA9B174005E1E61 /* PokemonRegionView.swift */; };
+		ED6998512AA9BF53005E1E61 /* MultimediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6998502AA9BF53005E1E61 /* MultimediaView.swift */; };
 		ED8779CE2AA62E9200BF201D /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = ED8779CD2AA62E9200BF201D /* FLAnimatedImage */; };
 		ED8779D02AA6335600BF201D /* GIfImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8779CF2AA6335600BF201D /* GIfImage.swift */; };
 		ED8779D62AA6358200BF201D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8779D52AA6358200BF201D /* SplashScreen.swift */; };
@@ -236,6 +237,7 @@
 		ED6998482AA9AFE9005E1E61 /* PokemonRegionDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRegionDomain.swift; sourceTree = "<group>"; };
 		ED69984A2AA9B06A005E1E61 /* PokemonRegionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRegionViewModel.swift; sourceTree = "<group>"; };
 		ED69984C2AA9B174005E1E61 /* PokemonRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRegionView.swift; sourceTree = "<group>"; };
+		ED6998502AA9BF53005E1E61 /* MultimediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimediaView.swift; sourceTree = "<group>"; };
 		ED8779CF2AA6335600BF201D /* GIfImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIfImage.swift; sourceTree = "<group>"; };
 		ED8779D52AA6358200BF201D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		ED8779D82AA637EB00BF201D /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
@@ -631,6 +633,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		ED69984E2AA9BF37005E1E61 /* Multimedia */ = {
+			isa = PBXGroup;
+			children = (
+				ED69984F2AA9BF40005E1E61 /* View */,
+			);
+			path = Multimedia;
+			sourceTree = "<group>";
+		};
+		ED69984F2AA9BF40005E1E61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED6998502AA9BF53005E1E61 /* MultimediaView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ED8779CA2AA62E6E00BF201D /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +673,7 @@
 		ED8779D32AA634C900BF201D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				ED69984E2AA9BF37005E1E61 /* Multimedia */,
 				ED69983E2AA9AAD1005E1E61 /* Region */,
 				ED6998282AA96497005E1E61 /* PokemonDetail */,
 				ED4D70C72AA857C80074B9A9 /* PokemonList */,
@@ -922,6 +941,7 @@
 				ED4D70F02AA8C8770074B9A9 /* DataController.swift in Sources */,
 				ED6998412AA9ADE2005E1E61 /* RegionView.swift in Sources */,
 				ED69984B2AA9B06A005E1E61 /* PokemonRegionViewModel.swift in Sources */,
+				ED6998512AA9BF53005E1E61 /* MultimediaView.swift in Sources */,
 				ED69982E2AA96838005E1E61 /* DetailPokemonView.swift in Sources */,
 				ED69984D2AA9B174005E1E61 /* PokemonRegionView.swift in Sources */,
 				ED4D704E2AA8100E0074B9A9 /* Application_utility.swift in Sources */,
@@ -1193,7 +1213,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
-				MARKETING_VERSION = 0.8.0;
+				MARKETING_VERSION = 0.9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andcamilo001.Pokedex-Platzi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1234,7 +1254,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
-				MARKETING_VERSION = 0.8.0;
+				MARKETING_VERSION = 0.9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andcamilo001.Pokedex-Platzi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
