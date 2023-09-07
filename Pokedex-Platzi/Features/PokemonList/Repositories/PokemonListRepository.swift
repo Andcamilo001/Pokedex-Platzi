@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+
 protocol PokemonRepositoryProtocol {
     func fetchPokemon(id: Int) async throws -> Pokemon
     func fetchFirstPokemons() async throws -> [PokemonDomain]

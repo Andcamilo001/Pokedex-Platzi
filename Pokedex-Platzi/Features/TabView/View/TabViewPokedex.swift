@@ -15,39 +15,43 @@ struct TabViewPokedex: View {
         
         var body: some View {
             
-            TabView(selection: $selectedTab) {
-      
-                PokemonListView(pokemonListViewModel: pokemonListViewModel)
-                    .tabItem {
-                        Image(selectedTab == 0 ? stringToAssets.pokedexSelected : stringToAssets.pokedexUnselected)
-                        Text(textButtons.tabOne)
-                    }
-                    .tag(0)
-                
-                TestingCoreData()
-                    .tabItem {
-                        Image(selectedTab == 1 ? stringToAssets.regionSelected : stringToAssets.regionUnselected)
-                        Text(textButtons.tabTwo)
-                    }
-                    .tag(1)
+            NavigationView {
+                TabView(selection: $selectedTab) {
+          
+                    PokemonListView(pokemonListViewModel: pokemonListViewModel)
+                        .tabItem {
+                            Image(selectedTab == 0 ? stringToAssets.pokedexSelected : stringToAssets.pokedexUnselected)
+                            Text(textButtons.tabOne)
+                        }
+                        .tag(0)
+                    
+                    TestingCoreData()
+                        .tabItem {
+                            Image(selectedTab == 1 ? stringToAssets.regionSelected : stringToAssets.regionUnselected)
+                            Text(textButtons.tabTwo)
+                        }
+                        .tag(1)
 
-                Text("Pestaña 3")
-                    .tabItem {
-                        Image(selectedTab == 2 ? stringToAssets.favoritesSelected : stringToAssets.favoritesUnselected)
-                        Text(textButtons.tabThree)
-                    }
-                    .tag(2)
-                
-                Text("Pestaña 3")
-                    .tabItem {
-                        Image(selectedTab == 3 ? stringToAssets.profileSelected : stringToAssets.profileUnselected)
-                        Text(textButtons.tabFour)
-                    }
-                    .tag(3)
+                    Text("Pestaña 3")
+                        .tabItem {
+                            Image(selectedTab == 2 ? stringToAssets.favoritesSelected : stringToAssets.favoritesUnselected)
+                            Text(textButtons.tabThree)
+                        }
+                        .tag(2)
+                    
+                    Text("Pestaña 3")
+                        .tabItem {
+                            Image(selectedTab == 3 ? stringToAssets.profileSelected : stringToAssets.profileUnselected)
+                            Text(textButtons.tabFour)
+                        }
+                        .tag(3)
+                }
+                .onAppear {
+                    pokemonListViewModel.fetchPokemons(context: context)
             }
-            .onAppear {
-                pokemonListViewModel.fetchPokemons(context: context)
             }
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
     }
 

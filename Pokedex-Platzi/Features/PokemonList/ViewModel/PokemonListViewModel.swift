@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 import CoreData
-
+import Alamofire
 
 class PokemonListViewModel: ObservableObject {
     
@@ -37,7 +37,7 @@ class PokemonListViewModel: ObservableObject {
                     self.isLoading = false
                 }
             } catch {
-                self.errorConectionData = true
+                print("error")
             }
         }
     }
@@ -52,11 +52,17 @@ class PokemonListViewModel: ObservableObject {
                     self.saveData(context: context)
                 }
             } catch {
-                self.errorConectionData = true
+                print("error")
+
             }
         }
     }
     
+    func isInternetUnavailable() -> Bool {
+        let manager = NetworkReachabilityManager.default
+
+        return !(manager?.isReachable ?? false)
+    }
     
     func getColor(type: String) -> Color {
         switch type {
