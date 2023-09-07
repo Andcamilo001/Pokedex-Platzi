@@ -46,7 +46,7 @@ class PokemonRepository: PokemonRepositoryProtocol {
 
     func fetchFirstPokemons() async throws -> [PokemonDomain] {
         var pokemons: [PokemonDomain] = []
-            for id in 1...151 {
+            for id in 1...21 {
                 let pokemon = try await fetchPokemon(id: id)
                 pokemons.append(PokemonDomain(id: pokemon.id, name: pokemon.name, sprite: pokemon.sprites.frontDefault, type: [pokemon.types[0].type.name, pokemon.types[safe: 1]?.type.name ?? ""]))
             }
