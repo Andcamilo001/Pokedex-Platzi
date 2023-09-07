@@ -22,9 +22,11 @@ struct Pokemon: Codable {
 
 struct Sprites: Codable {
     let frontDefault: String
+    let other: Other?
     
     enum CodingKeys: String, CodingKey {
         case frontDefault = "front_default"
+        case other
     }
 }
 
