@@ -7,21 +7,24 @@
 
 import SwiftUI
 
+
 struct TabViewPokedex: View {
     @State private var selectedTab = 0
+    @ObservedObject var pokemonListViewModel: PokemonListViewModel = PokemonListViewModel(pokemonRepository: PokemonRepository())
+    @Environment(\.managedObjectContext) var context
         
         var body: some View {
             
             TabView(selection: $selectedTab) {
       
-                Text("Pestaña 1")
+                PokemonListView(pokemonListViewModel: pokemonListViewModel)
                     .tabItem {
                         Image(selectedTab == 0 ? stringToAssets.pokedexSelected : stringToAssets.pokedexUnselected)
                         Text(textButtons.tabOne)
                     }
                     .tag(0)
                 
-                Text("Pestaña 2")
+                TestingCoreData()
                     .tabItem {
                         Image(selectedTab == 1 ? stringToAssets.regionSelected : stringToAssets.regionUnselected)
                         Text(textButtons.tabTwo)
@@ -41,6 +44,9 @@ struct TabViewPokedex: View {
                         Text(textButtons.tabFour)
                     }
                     .tag(3)
+            }
+            .onAppear {
+                pokemonListViewModel.fetchPokemons(context: context)
             }
         }
     }
