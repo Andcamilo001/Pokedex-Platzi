@@ -1,59 +1,38 @@
 //
-//  PokeexListViewModel.swift
+//  PokemonRegionViewModel.swift
 //  Pokedex-Platzi
 //
-//  Created by Andres Camilo Lezcano Restrepo on 6/09/23.
+//  Created by Andres Camilo Lezcano Restrepo on 7/09/23.
 //
 
 import Foundation
 import SwiftUI
-import CoreData
 import Alamofire
 
-class PokemonListViewModel: ObservableObject {
+class PokemonRegionViewModel: ObservableObject {
     
-    @Published var pokemons: [PokemonDomain] = []
+    @Published var pokemons: [PokemonRegionDomain] = []
     @Published var isLoading: Bool = false
-    @Published var errorConectionData: Bool = false
-    @Published var i: Int = 22
-    @Published var n: Int = 32
     
-    private let pokemonRepository: PokemonRepositoryProtocol
+    private let pokemonRegionRepository: PokemonRegionRepositoryProtocol
     
-    init(pokemonRepository: PokemonRepositoryProtocol) {
-        self.pokemonRepository = pokemonRepository
+    init(pokemonRegionRepository: PokemonRegionRepositoryProtocol) {
+        self.pokemonRegionRepository = pokemonRegionRepository
     }
     
-    func fetchPokemons(context: NSManagedObjectContext) {
+    func fetchPokemons(i: Int, n: Int) {
         
         isLoading = true
         
         Task {
             do {
-                let pokemons = try await pokemonRepository.fetchFirstPokemons()
+                let pokemons = try await pokemonRegionRepository.fetchRegionPokemons(i: i, n: n)
                 DispatchQueue.main.async {
-                    self.pokemons.append(contentsOf: pokemons)
-                    self.saveData(context: context)
+                    self.pokemons = pokemons
                     self.isLoading = false
                 }
             } catch {
                 print("error")
-            }
-        }
-    }
-    
-    func fetchAllPokemons(context: NSManagedObjectContext) {
-        
-        Task {
-            do {
-                let pokemons = try await pokemonRepository.fetchAllPokemons(i: i, n: n)
-                DispatchQueue.main.async {
-                    self.pokemons.append(contentsOf: pokemons)
-                    self.saveData(context: context)
-                }
-            } catch {
-                print("error")
-
             }
         }
     }
@@ -168,55 +147,60 @@ class PokemonListViewModel: ObservableObject {
         }
     }
     
-    func saveData(context: NSManagedObjectContext) {
-        for data in pokemons {
-            let fetchRequest: NSFetchRequest<PokemonEntity> = PokemonEntity.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "id == %d", data.id)
-
-            do {
-                let existingPokemon = try context.fetch(fetchRequest).first
-
-                if let existingPokemon = existingPokemon {
-                    continue
-                } else {
-                    let entity = PokemonEntity(context: context)
-                    entity.id = Int32(data.id)
-                    entity.name = data.name
-                    entity.type = data.type[0]
-                    entity.type2 = data.type[1]
-                    entity.imageBase64 = data.sprite
-                }
-            } catch {
-                print("Error al buscar Pokémon existente: \(error.localizedDescription)")
-            }
+    func getRangeI(region: String) -> Int {
+        switch region {
+        case "Kanto":
+            return 1
+        case "Johto":
+            return 152
+        case "Hoenn":
+            return 252
+        case "Sinnoh":
+            return 387
+        case "Unova":
+            return 494
+        case "Kalos":
+            return 650
+        case "Alola":
+            return 722
+        case "Galar":
+            return 810
+        default :
+            return 0
         }
-
-        do {
-            try context.save()
-            print("Guardado exitoso")
-        } catch {
-            print("Error al guardar los datos: \(error.localizedDescription)")
+    }
+    
+    func getRangeN(region: String) -> Int {
+        switch region {
+        case "Kanto":
+            return 151
+        case "Johto":
+            return 251
+        case "Hoenn":
+            return 386
+        case "Sinnoh":
+            return 493
+        case "Unova":
+            return 649
+        case "Kalos":
+            return 721
+        case "Alola":
+            return 809
+        case "Galar":
+            return 898
+        default :
+            return 0
         }
     }
 }
 
-enum ColorTypePokemon: String {
-    case Grass = "grass"
-    case Fire = "fire"
-    case Water = "water"
-    case Electric = "electric"
-    case Bug = "bug"
-    case Flying = "flying"
-    case Normal = "normal"
-    case Poison = "poison"
-    case Ground = "ground"
-    case Rock = "rock"
-    case Fighting = "fighting"
-    case Psychic = "psychic"
-    case Ghost = "ghost"
-    case Ice = "ice"
-    case Steel = "steel"
-    case Dragon = "dragon"
-    case Dark = "dark"
-    case Fairy = "fairy"
+enum regionPokemon: String {
+    case Kanto = "Kanto"
+    case Johto = "Johto"
+    case Hoenn = "Hoenn"
+    case Sinnoh = "Sinnoh"
+    case Unova = "Unova"
+    case Kalos = "Kalos"
+    case Alola = "Alola"
+    case Galar = "Galar"
 }

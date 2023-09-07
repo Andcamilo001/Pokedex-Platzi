@@ -98,3 +98,8 @@ struct appText {
     static let subtitleLoginSuccess = "Esperamos que hayas tenido muchas aventuras desde la ultima vez que nos vimos."
     
 }
+
+struct regionsPokemon {
+    
+    static let region: [String] = ["Kanto", "Johto", "Hoenn", "Sinnoh", "Unova", "Kalos", "Alola", "Galar"]
+}
