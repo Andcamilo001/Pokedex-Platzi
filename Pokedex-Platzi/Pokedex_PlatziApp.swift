@@ -26,21 +26,23 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct Pokedex_PlatziApp: App {
-//    let persistenceController = PersistenceController.shared
+        let persistenceController = PersistenceController.shared
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var authenticationViewModel = AuthenticationViewModel()
+//    @StateObject private var dataController = DataController()
     
     var body: some Scene {
         WindowGroup {
             
-            //            if let user = authenticationViewModel.user {
-            //                ContentView()
-            //            } else {
-            
-            SplashScreen()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            //            }
+            if let user = authenticationViewModel.user {
+                TabViewPokedex()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            } else {
+                
+                SplashScreen()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }
