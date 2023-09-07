@@ -56,7 +56,7 @@ struct textButtons {
     static let create = "Crear"
     static let tabOne = "Pokedex"
     static let tabTwo = "Region"
-    static let tabThree = "Favoritos"
+    static let tabThree = "Multimedia"
     static let tabFour = "Perfil"
 }
 

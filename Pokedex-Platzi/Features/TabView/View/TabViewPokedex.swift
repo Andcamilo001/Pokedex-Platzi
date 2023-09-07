@@ -32,7 +32,7 @@ struct TabViewPokedex: View {
                         }
                         .tag(1)
 
-                    Text("Pestaña 3")
+                    MultimediaView()
                         .tabItem {
                             Image(selectedTab == 2 ? stringToAssets.favoritesSelected : stringToAssets.favoritesUnselected)
                             Text(textButtons.tabThree)
@@ -54,9 +54,3 @@ struct TabViewPokedex: View {
             .navigationBarBackButtonHidden(true)
         }
     }
-
-struct TabViewPokedex_Previews: PreviewProvider {
-    static var previews: some View {
-        TabViewPokedex()
-    }
-}
