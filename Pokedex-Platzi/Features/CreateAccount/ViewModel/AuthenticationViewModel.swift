@@ -35,4 +35,13 @@ final class AuthenticationViewModel: ObservableObject {
     func getCurrentUser() {
         self.user = authenticationRepository.getCurrentUser()
     }
+    
+    func logOut() {
+        do {
+            try authenticationRepository.logOut()
+            self.user = nil
+        } catch {
+            print("Error")
+        }
+    }
 }

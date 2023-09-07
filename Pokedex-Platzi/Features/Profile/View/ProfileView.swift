@@ -1,28 +1,30 @@
 //
-//  OnboardingScreenThree.swift
+//  ProfileView.swift
 //  Pokedex-Platzi
 //
-//  Created by Andres Camilo Lezcano Restrepo on 4/09/23.
+//  Created by Andres Camilo Lezcano Restrepo on 7/09/23.
 //
 
 import SwiftUI
 
-struct OnboardingScreenThree: View {
-    @State var image: String = stringToAssets.onboardingImageScreenThree
-    @State var title: String = appText.titleOnboardingScreenThree
-    @State var subtitle: String = appText.subtitleOnboardingScreenThree
-    @State var textButton: String = textButtons.createAccount
-    @State var textButtonWhite: String = textButtons.accountExists
-    @State var createAccount: Bool = false
-    @State var login: Bool = false
+struct ProfileView: View {
+    @State var image: String = "Profile"
+    @State var title: String = "Esta parte esta en construccion"
+    @State var subtitle: String = "Esperamos entregarte muchas funcionalidades pronto en tu perfil."
+    @State var textButton: String = "Cerrar Sesion"
+    @State var textButtonWhite: String = "Borrar datos almacenados"
+    @StateObject var authenticationViewModel: AuthenticationViewModel = AuthenticationViewModel()
+    @FetchRequest(
+        entity: PokemonEntity.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \PokemonEntity.id, ascending: true)  ]) var pokemons: FetchedResults<PokemonEntity>
+    @Environment(\.managedObjectContext) private var context
+    @Binding var createAccount: Bool
+    @Binding var login: Bool
     
     var body: some View {
         
         NavigationView {
             ZStack {
-                
-                NavigationLink(destination: CreateAccountScreen(createAccount: $createAccount, login: $login), isActive: $createAccount) { }
-                NavigationLink(destination: LoginScreen(createAccount: $createAccount, login: $login), isActive: $login) { }
                 
                 VStack {
                     
@@ -44,7 +46,9 @@ struct OnboardingScreenThree: View {
                     
                     
                     Button(action: {
-                        createAccount = true
+                        authenticationViewModel.logOut()
+                        createAccount = false
+                        login = false
                     }) {
                         ZStack {
                             
@@ -59,14 +63,20 @@ struct OnboardingScreenThree: View {
                     .padding()
                     
                     Button(action: {
-                        login = true
+                        do{
+                            pokemons.forEach { (pokemon) in
+                                context.delete(pokemon)
+                            }
+                            try context.save()
+                        } catch {
+                            print(error.localizedDescription)
+                        }
                     }) {
-                        Text(textButtons.accountExists)
+                        Text("Borrar datos almacenados")
                             .font(.custom(Fonts.poppinsSemiBold, size: framesUI.width * 0.05))
                             .foregroundColor(PokedexColors.buttonsBlue)
                     }
                 }
-                .padding(.top, framesUI.height * 0.14)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(PokedexColors.backgroundWhite)
@@ -76,9 +86,3 @@ struct OnboardingScreenThree: View {
     }
 }
 
-
-struct OnboardingScreenThree_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingScreenThree()
-    }
-}

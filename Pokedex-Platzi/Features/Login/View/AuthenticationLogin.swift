@@ -20,13 +20,15 @@ struct AuthenticationLogin: View {
     @State var messageCredential: Bool = false
     @ObservedObject var viewModelValidate: AuthenticationValidateViewModel = AuthenticationValidateViewModel()
     @ObservedObject var loginViewModel: LoginViewModel = LoginViewModel()
+    @Binding var createAccount: Bool
+    @Binding var login: Bool
     
     var body: some View {
         
         NavigationView {
             ZStack {
                 
-                NavigationLink(destination: LoginSucess(), isActive: $signIn) { }
+                NavigationLink(destination: LoginSucess(createAccount: $createAccount, login: $login), isActive: $signIn) { }
                 
                 VStack {
                     
@@ -193,11 +195,5 @@ struct AuthenticationLogin: View {
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-    }
-}
-
-struct AuthenticationLogin_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthenticationLogin()
     }
 }

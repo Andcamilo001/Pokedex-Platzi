@@ -26,13 +26,15 @@ struct CreateAccountWithMail: View {
     @State var messageConfirmCredential: Bool = false
     @State var createAccount: Bool = false
     @ObservedObject var viewModelValidate: AuthenticationValidateViewModel = AuthenticationValidateViewModel()
+    @Binding var createAccounts: Bool
+    @Binding var login: Bool
     
     var body: some View {
         
         NavigationView {
             ZStack {
                 
-                NavigationLink(destination: CreateAccountSuccess(), isActive: $createEmail) { }
+                NavigationLink(destination: CreateAccountSuccess(createAccount: $createAccounts, login: $login), isActive: $createEmail) { }
                 
                 VStack {
                     
@@ -266,11 +268,5 @@ struct CreateAccountWithMail: View {
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-    }
-}
-
-struct CreateAccountWithMail_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateAccountWithMail()
     }
 }

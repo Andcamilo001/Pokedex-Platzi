@@ -29,4 +29,8 @@ final class AuthenticationDataSource {
             completionBlock(.success(.init(email: email)))
         }
     }
+    
+    func logOut() throws {
+        try Auth.auth().signOut()
+    }
 }
